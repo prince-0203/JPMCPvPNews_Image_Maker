@@ -1,2 +1,2 @@
 # JPMCPvPNews_Image_Maker
-JPMCPvP 処罰画像メーカー
+@JPMCPvP_News 処罰画像メーカー
