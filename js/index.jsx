@@ -12,7 +12,7 @@ $(function() {
     $('#result', form).val('【処罰】' + minecraftId + '\n' + reason + ' → ' + type + '(' + Math.floor(Math.random() * 61) + '秒前)\nhttps://pvp.minecraft.jp/punishments/56…');
 
     var img = new Image();
-    img.src = 'http://prince.webcrow.jp/avatar.php?id=' + $('#minecraftId', form).val();
+    img.src = 'http://prince.webcrow.jp/avatar.php?id=' + minecraftId;
     img.setAttribute('crossOrigin', 'Anonymous');
     img.onload = function() {
       canvas
