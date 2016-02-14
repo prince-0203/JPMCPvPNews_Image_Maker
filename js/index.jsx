@@ -5,7 +5,7 @@ $(function() {
   var update = function() {
     var img = new Image();
     img.src = 'http://prince.webcrow.jp/avatar.php?id=' + $('#minecraftId', form).val();
-    img.crossOrigin = 'Anonymous';
+    img.setAttribute('crossOrigin', 'anonymous');
     img.onload = function() {
       canvas
         .clearCanvas()
