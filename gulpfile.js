@@ -1,6 +1,6 @@
 /* jshint esnext: true */
 const gulp = require("gulp");
-const less = require('gulp-less');
+const sass = require('gulp-sass');
 const react = require('gulp-react');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
@@ -21,12 +21,12 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('./dest/'));
 });
 
-// LESS
-gulp.task('less', function() {
-  return gulp.src('./less/*.less')
+// SASS
+gulp.task('sass', function() {
+  return gulp.src('./sass/*.scss')
     .pipe(plumber({ errorHandler: notify.onError('<%= error.message %>') }))
     .pipe(sourcemaps.init())
-    .pipe(less())
+    .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 version'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dest/'));
@@ -45,7 +45,7 @@ gulp.task('react', function() {
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch('./less/*.less', ['less']);
+  gulp.watch('./sass/*.scss', ['sass']);
   gulp.watch('./js/*.jsx', ['react']);
 });
 
@@ -53,7 +53,7 @@ gulp.task('watch', function() {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['less', 'react'],
+    ['sass', 'react'],
     'copy',
     callback
   );
