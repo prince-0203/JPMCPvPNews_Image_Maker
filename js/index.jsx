@@ -3,6 +3,14 @@ $(function() {
   var form = $('#form');
 
   var update = function() {
+    var minecraftId = $('#minecraftId', form).val();
+    var reason = $('#reason', form).val();
+    var server = $('#server', form).val();
+    var type = $('#type', form).val();
+    var dayTime = $('#dayTime', form).val();
+
+    $('#result', form).val('【処罰】' + minecraftId + '\n' + reason + ' → ' + type + '(' + Math.floor(Math.random() * 61) + '秒前)\nhttps://pvp.minecraft.jp/punishments/56…');
+
     var img = new Image();
     img.src = 'http://prince.webcrow.jp/avatar.php?id=' + $('#minecraftId', form).val();
     img.setAttribute('crossOrigin', 'Anonymous');
@@ -29,7 +37,7 @@ $(function() {
                     fromCenter: false,
                     fontSize: 85,
                     fontFamily: 'rounded_m_1pregular',
-                    text: $('#minecraftId', form).val()
+                    text: minecraftId
                   })
                   .drawText({
                     fillStyle: 'white',
@@ -39,7 +47,7 @@ $(function() {
                     fromCenter: false,
                     fontSize: 55,
                     fontFamily: 'rounded_m_1pregular',
-                    text: $('#reason', form).val()
+                    text: reason
                   })
                   .drawText({
                     fillStyle: 'white',
@@ -49,7 +57,7 @@ $(function() {
                     fromCenter: false,
                     fontSize: 70,
                     fontFamily: 'rounded_m_1pregular',
-                    text: '(' + $('#server', form).val() + ')'
+                    text: '(' + server + ')'
                   })
                   .drawText({
                     fillStyle: 'white',
@@ -59,7 +67,7 @@ $(function() {
                     fromCenter: false,
                     fontSize: 85,
                     fontFamily: 'rounded_m_1pregular',
-                    text: $('#type', form).val()
+                    text: type
                   })
                   .drawText({
                     fillStyle: 'white',
@@ -69,7 +77,7 @@ $(function() {
                     fromCenter: false,
                     fontSize: 40,
                     fontFamily: 'rounded_m_1pregular',
-                    text: '(' + $('#dayTime', form).val() + ')'
+                    text: '(' + dayTime + ')'
                   });
                 $('#copyImage', form).attr('href', canvas.getCanvasImage('png'));
               }
