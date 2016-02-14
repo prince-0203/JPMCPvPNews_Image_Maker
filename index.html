@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="rounded-mplus-1p-regular-webfont/stylesheet.css">
+  <link rel="stylesheet" href="dest/index.css">
+  <script src="dest/jquery-2.2.0.min.js"></script>
+  <script src="dest/jcanvas.min.js"></script>
+  <script src="dest/index.js"></script>
+  <title>@JPMCPvPNews 画像メーカー</title>
+</head>
+<body>
+  <canvas id="canvas" width="1511" height="850" style="width: 755px; height: 425px">このサイトを使用するには、canvas要素をサポートしたブラウザが必要です。</canvas><br />
+  <form id="form">
+    <div>
+      <label for="minecraftId">MinecraftID: </label>
+      <input type="text" id="minecraftId" value="prince_0203"></input>
+    </div>
+    <div>
+      <label for="reason">処罰理由: </label>
+      <input type="text" id="reason" value="Compromised Account"></input>
+    </div>
+    <div>
+      <label for="reason">サーバー: </label>
+      <input type="text" id="server" value="On Slack"></input>
+    </div>
+    <div>
+      <label for="reason">種類: </label>
+      <input type="text" id="type" value="無期限BAN"></input>
+    </div>
+    <div>
+      <label for="reason">日時: </label>
+      <input type="text" id="dayTime" value="2016/02/12 12:34:56"></input>
+    </div>
+    <div class="button">
+      <button type="button" id="generate">生成</button>
+    </div>
+    <div>
+      <label for="result">作成結果: </label>
+      <textarea id="result" rows="4", cols="20" readonly></textarea>
+    </div>
+    <!--div class="button">
+      <a id="copyImage" target="_blank"><button type="button">画像を新しいタブで開く</button></a>
+    </div-->
+  </form>
+</body>
+</html>
