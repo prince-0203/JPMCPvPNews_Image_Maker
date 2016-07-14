@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'rounded-mplus-1p-regular';
+    src: url('../rounded-mplus-1p-regular/rounded-mplus-1p-regular.woff2') format('woff2'),
+         url('../rounded-mplus-1p-regular/rounded-mplus-1p-regular.woff') format('woff'),
+         url('../rounded-mplus-1p-regular/rounded-mplus-1p-regular.ttf') format('truetype');
+}
+
 html, body {
-  font-family: 'rounded_m_1pregular';
+  font-family: 'rounded-mplus-1p-regular';
 }
 
 #form {

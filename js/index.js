@@ -32,7 +32,7 @@ $(function() {
                   strokeWidth: 0.1,
                   fromCenter: false,
                   fontSize: 85,
-                  fontFamily: 'rounded_m_1pregular',
+                  fontFamily: 'rounded-mplus-1p-regular',
                   text: minecraftId
                 })
                 .drawText({
@@ -42,7 +42,7 @@ $(function() {
                   strokeWidth: 0.1,
                   fromCenter: false,
                   fontSize: 55,
-                  fontFamily: 'rounded_m_1pregular',
+                  fontFamily: 'rounded-mplus-1p-regular',
                   text: reason
                 })
                 .drawText({
@@ -52,7 +52,7 @@ $(function() {
                   strokeWidth: 0.1,
                   fromCenter: false,
                   fontSize: 70,
-                  fontFamily: 'rounded_m_1pregular',
+                  fontFamily: 'rounded-mplus-1p-regular',
                   text: '(' + server + ')'
                 })
                 .drawText({
@@ -62,7 +62,7 @@ $(function() {
                   strokeWidth: 0.1,
                   fromCenter: false,
                   fontSize: 85,
-                  fontFamily: 'rounded_m_1pregular',
+                  fontFamily: 'rounded-mplus-1p-regular',
                   text: type
                 })
                 .drawText({
@@ -72,7 +72,7 @@ $(function() {
                   strokeWidth: 0.1,
                   fromCenter: false,
                   fontSize: 40,
-                  fontFamily: 'rounded_m_1pregular',
+                  fontFamily: 'rounded-mplus-1p-regular',
                   text: '(' + dayTime + ')'
                 });
             }
