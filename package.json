@@ -24,7 +24,7 @@
   "homepage": "https://github.com/prince-0203/JPMCPvPNews_Image_Maker#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.2.0",
